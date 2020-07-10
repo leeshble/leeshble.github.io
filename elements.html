@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<!--
+	Urban by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+	<title>Contract - Urban by TEMPLATED</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<!-- 7.3장 배열, 7.5장 String 객체, 9.6장 form 라디오 버튼-->
+	<script>
+		function findChecked() {
+			var found = null;
+			var kind = document.getElementsByName("kind");
+			var p = document.getElementById("send_check");
+			for(var i = 0; i<kind.length; i++) {
+				if(kind[i].checked == true)
+					found = kind[i];
+			}
+			if(found != null){
+				var send_kind = new String(found.value);
+				alert("It was sent as "+send_kind+"!");
+			}
+			else
+				alert("Nothing selected!");
+		}
+	</script>
+</head>
+<body class="subpage">
+
+	<!-- Header -->
+	<header id="header">
+		<div class="logo"><a href="index.html">Urban <span>by TEMPLATED</span></a></div>
+		<a href="#menu">Menu</a>
+	</header>
+
+	<!-- Nav -->
+	<nav id="menu">
+		<ul class="links">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="generic.html">Browser Info</a></li>
+			<li><a href="elements.html">Contract</a></li>
+		</ul>
+	</nav>
+
+	<!-- Main -->
+	<div id="main">
+		<section class="wrapper style1">
+			<div class="inner">
+
+				<header class="align-center">
+					<h1>Contract</h1>
+					<p>Contract us! Whenever you want!</p>
+				</header>
+				<hr class="major" />
+				<div class="row 200%">
+					<div class="6u 12u$(medium)">
+						<h3>It will take some time to read!</h3>
+						<p>We are online in weekday<br>We will read your message in 10am~4pm.</p>
+					</div>
+					<div class="6u$ 12u$(medium)">
+						<h3>Form</h3>
+						<!---->
+						<form>
+							<div class="row uniform">
+								<div class="12u$">
+									<input type="email" name="email" id="email" value="" placeholder="Email"/>
+								</div>
+								<div class="4u 12u$(small)">
+									<input type="radio" id="Question" name="kind" value="Question">
+									<label for="Question">Question</label>
+								</div>
+								<div class="4u 12u$(small)">
+									<input type="radio" id="Advice" name="kind" value="Advice">
+									<label for="Advice">Advice</label>
+								</div>
+								<div class="4u$ 12u$(small)">
+									<input type="radio" id="Business" name="kind" value="Business">
+									<label for="Business">Business</label>
+								</div>
+								<!-- Break -->
+								<div class="12u$">
+									<textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
+								</div>
+								<!-- Break -->
+								<div class="12u$">
+									<button onclick="findChecked()">Send Message</button>
+									<p id="send_check"></p>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="copyright">
+			<ul class="icons">
+				<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+				<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+				<!-- 9.5장 프린트 기능 -->
+				<li><a href="#" class="icon fa-print" onclick="window.print()"><span class="label">Print</span></a>
+			</ul>
+			<p>&copy; Untitled. All rights reserved. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.</p>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body></html>

@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<!--
+	Urban by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+	<title>Browser Info - Urban by TEMPLATED</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<script>
+		
+		// 10.6장 navgator 객체로 브라우저 정보 출력
+		function printNavigator() {
+			var text = "<span>appCodeName</span>: " + navigator.appCodeName + "<br>";
+			text += "<span>appName</span>: " + navigator.appName + "<br>";
+			text += "<span>appVersion</span>: " + navigator.appVersion + "<br>";
+			text += "<span>platform</span>: " + navigator.platform + "<br>";
+			text += "<span>product</span>: " + navigator.product + "<br>";
+			text += "<span>userAgent</span>: " + navigator.userAgent + "<br>";
+			text += "<span>vendor</span>: " + navigator.vendor + "<br>";
+			text += "<span>language</span>: " + navigator.language + "<br>";
+			text += "<span>onLine</span>: " + navigator.onLine + "<br>";
+			text += "<span>cookieEnabled</span>: " + navigator.cookieEnabled + "<br>";
+			text += "<span>javaEnabled()</span>:" + navigator.javaEnabled() + "<br>";
+			text += "<span>plugins.length</span>: " + navigator.plugins.length + "<br>";
+			for (j = 0; j < navigator.plugins.length; j++) {
+				text += "plugins" + j + " : <blockquote>";
+				text += navigator.plugins[j].name + "<br>";
+				text += "<i>" + navigator.plugins[j].description + "</i><br>";
+				text += navigator.plugins[j].filename + "</blockquote>";
+			}
+
+		// div 태그에 출력
+		var div = document.getElementById("info");
+		div.innerHTML = text;
+		}
+	</script>
+</head>
+
+<!-- 9.5장 onload 구현 -->
+<body class="subpage" onload="printNavigator()">
+	<!-- Header -->
+	<header id="header">
+		<div class="logo"><a href="index.html">Urban <span>by TEMPLATED</span></a></div>
+		<a href="#menu">Menu</a>
+	</header>
+
+	<!-- Nav -->
+	<nav id="menu">
+		<ul class="links">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="generic.html">Browser Info</a></li>
+			<li><a href="elements.html">Contract</a></li>
+		</ul>
+	</nav>
+
+	<!-- Main -->
+	<div id="main">
+
+		<!-- Section -->
+		<section class="wrapper">
+			<div class="inner">
+				<header class="align-center">
+					<h1>Browser Info</h1>
+					<p>Your Browser info will be appear below.</p>
+				</header>
+				<div class="flex flex-2">
+					<div class="col col2">
+						<!-- 10.6장 navgator 객체로 브라우저 정보 출력 -->
+						<div id="info"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="copyright">
+			<ul class="icons">
+				<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+				<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="#" class="icon fa-print" onclick="window.print()"><span class="label">Print</span></a></li>
+			</ul>
+			<p>&copy; Untitled. All rights reserved. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.</p>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body></html>
